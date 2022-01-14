@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>booking</title>
+</head>
+<body>
+    <form action="https://jkorpela.fi/cgi-bin/echo.cgi">
+    <table>
+        <tr>
+            <th>Book Flight</th>
+            <th style="color: white; background-color: orange; border: 1px solid;">Schedule</th>
+            <th style="color: white; background-color: orange; border: 1px solid;">Ticket</th>
+            <th style="color: white; background-color: orange; border: 1px solid;">Hotel</th>
+        </tr>
+        <tr>
+            <td colspan="2">Flying from</td>
+            <td>To</td>
+        </tr>
+        <tr>
+            <td colspan="2"><select name="flyingForm" id="flyingForm">
+                <option value="PKR">Karachi, Pakist</option>
+                <option value="THB">Bangkok</option>
+            </select></td>
+            <td colspan="2"><select name="flyingTo" id="flyingTo">
+                <option value="PKR">Islamabad,pal</option>
+                <option value="THB">changmai</option>
+            </select></td>
+        </tr>
+        <tr>
+            <td></td>
+        </tr>
+        <tr>
+            <td colspan="2">Departing</td>
+            <td>Returning</td>
+        </tr>
+        <tr>
+            <td colspan="2">         
+  
+                <input type="date" name="departing"></td>
+            <td colspan="2">                   
+
+                <input type="date" name="returning"></td>
+        </tr>
+        <tr>
+            <td></td>
+        </tr>
+    </tr>
+    <tr>
+        <td >Adult</td>
+        <td>Child</td>
+        <td >Infant</td>
+        <td>Currency</td>
+    </tr>
+    <tr>
+        <td><input type="number" name="adult" min="1" max="10" size="1"></td>
+        <td><input type="number" name="Child" min="1" max="10" size="1"></td>
+        <td><input type="number" name="Infant" min="1" max="10" size="1"></td>
+        <td><select name="currency" id="currency">
+            <option value="PKR">PKR</option>
+            <option value="THB">THB</option>
+        </select></td>
+    </tr>
+    <tr>
+        <td></td>
+    </tr>
+    </table>
+    <input type="submit" value="SEARCH" style="color: white; background-color: tomato; border-radius: 2px; border: none;">
+    </form>
+    
+</body>
+</html>

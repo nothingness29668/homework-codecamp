@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{margin: 0; padding: 0;box-sizing: border-box;}
+        body{
+            height: 100%;
+            background-color: #fff;
+            font-family:  Helvetica, Arial,sans-serif;
+            font-size: 16px;
+        }
+        .all{
+            display: flex;
+            flex-direction: column;
+            min-height: 100%;
+        }
+        .content {
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: column;
+            background-color: #f0f2f5;
+            padding-top: 40px;
+            padding-bottom: 116px;
+            align-items: center;
+        }
+        .header{
+            text-align: center;
+            width: 400px;
+        }
+        .logo{
+            margin-top: 20px;
+        }
+        .logo > img {
+            height: 106px;
+            margin: -28px;
+        }
+        h2{
+            font-size: 26px;
+            line-height: 28px;
+            width: auto;
+            font-weight: normal;
+        }
+        .inform {
+            text-align: center;
+        }
+        .container {
+            display: flex;
+            flex-direction: column;
+            background-color: #fff;
+            margin-top: 40px;
+            width: 396px;
+            padding: 10px 10px 24px 10px;
+            border-radius: 10px;
+            box-shadow: 5px 5px 20px 5px rgb(214, 214, 214) ;
+           
+        }
+        .main{
+            display: flex;
+            flex-direction: column;
+        }
+        .main > * {
+            margin: 6px;
+        }
+        input[type=text] {
+            padding: 14px  16px;
+            border: 1px solid #dddfe2;
+            border-radius: 6px;
+            outline: none;
+            font-size: 16px;
+        }
+        input[type=text]:focus {
+            border: 1px solid #1568d4;
+            box-shadow: 1px 1px 5px 1px #f5f5f5;
+        }
+        ::placeholder{
+            color: #aaaaaa;
+        }
+        a{
+            text-decoration: none;
+            color: #1877f2;
+        }
+        .main a {
+            padding-top: 10px;
+        }
+        .line {
+            border-bottom: 1px solid  #dddfe1;
+            margin: 20px 0px;
+        }
+        .button{
+            background-color: #1876f2;
+            color: #fff;
+            line-height: 48px;
+            text-align: center;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: bold;
+        }
+        .button:focus{
+            outline: none;
+        }
+        .button:hover{
+            background-color: #186df2;
+        }
+        .main>a:hover{
+            text-decoration: underline;
+        }
+        .page>a:hover{
+            text-decoration: underline;
+        }
+        a.button:hover {
+            background-color: #3dac27;
+        }
+        a.button {
+            background-color: #42b72a;
+            padding: 0 16px;
+            width: auto;
+            align-self: center;
+        }
+        .page{
+            display: flex;
+            margin-top: 28px;
+            justify-content: center;
+        }
+        .page > a {
+            color: black;
+            font-weight: bold;
+        }
+        .footer {
+            display: flex;
+            height: auto;
+            padding-top: 20px;
+            color: #737373;
+            font-size: 14px;
+        }
+        .footercontainer {
+            display: block;
+            margin: 0 40px;
+        }
+        .lang, .other{
+            display: flex;
+            flex-wrap: wrap;
+            list-style-type: none;
+        }
+        .lang > * {
+            padding-right: 10px;
+        }
+        .other > *{
+            padding-right: 20px;
+        }
+        li > a {
+            color: #737373;
+            cursor: pointer;
+        }
+        .copyright {
+            margin: 20px 0;
+            font-size: 13px;
+        }
+        @media (min-width:905px) {
+            .content {
+                flex-direction: row;
+                justify-content: center;
+                align-items: flex-start;
+                padding-top: 92px;
+                padding-bottom: 112px;
+            }
+            .header {
+                text-align: left;
+                flex: 1;
+                padding-left: 70px;
+            }
+            .header > h2 {
+                width: 340px;
+            }
+            .logo {
+                padding: 112px 0 16px;
+            }
+            .inform {
+                height: 496px;
+                padding-right: 90px;
+            }
+            .footer {
+                justify-content: center;
+            }
+            .footercontainer {
+                width: 980px;
+            }
+
+        }
+        @media (min-width:1075px){
+            h2 {
+
+                font-size: 30px;
+                line-height: 32px;
+                width: 500px;
+                font-weight: normal;
+
+            }
+            .header{
+                flex: 0;
+                width: 500px;
+                padding-right: 120px;
+                padding-left: 0px;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <div class="all">
+        <div class="content">
+            <div class="header">
+                <div class="logo"><img src="https://static.xx.fbcdn.net/rsrc.php/y8/r/dF5SId3UHWd.svg" alt="Facebook"></div>
+                <h2>Facebook ช่วยคุณเชื่อมต่อและแชร์กับผู้คนมากมายรอบตัวคุณ</h2>
+            </div>
+            <div class="inform">
+                <div class="container">
+                    <form class="main" action="#">
+                        <input type="text" id="uid" name="uid" placeholder="อีเมลหรือหมายเลขโทรศัพท์มือถือ">
+                        
+                        <input type="text" id="pw" name="password" placeholder="รหัสผ่าน">
+
+                        <input class="button" type="submit" value="เข้าสู่ระบบ">
+
+                        <a href="#">ลืมรหัสผ่านใช่หรือไม่</a>
+                        <div class="line"></div>
+                    </form>
+                    <a class="button" href="#">สร้างบัญชีใหม่</a>
+                </div>
+                <div class="page"> 
+                    <a href="#">สร้างเพจ</a>
+                    <div style="width:3px ;"> </div>
+                    <p>สำหรับบุคคลมีชื่อเสียง วงดนตรี หรือธุรกิจ</p>
+                </div>
+            </div>
+        </div>
+        <div class="footer">
+            <div class="footercontainer">
+                <div class="footertop">
+                    <ul class="lang">
+                        <li>ภาษาไทย</li>
+                        <li><a href="#" title="English (UK)">English (UK)</a></li>
+                        <li><a href="#" title="Japanese">日本語</a></li>
+                        <li><a href="#" title="Simplified Chinese (China)">中文(简体)</a></li>
+                        <li><a href="#" title="Vietnamese">Tiếng Việt</a></li>
+                        <li><a href="#" title="French">Français (France)</a></li>
+                        <li><a href="#" title="German">Deutsch</a></li>
+                        <li><a href="#" title="Russian">Русский</a></li>
+                        <li><a href="#" title="Spanish">Español</a></li>
+                        <li><a href="#" title="Portuguese (Brazil)">Português (Brasil)</a></li>
+                        <li><a href="#" title="Italiano">Italiano</a></li>
+                        <li><a href="#" title="แสดงภาษาอื่นๆ">
+                            <i class='fas fa-plus-square' style='font-size:20px;color:gainsboro'></i>
+                        </a></li>
+                    </ul>
+                </div>
+                <div class="line"></div>
+                <div class="footerbottom">
+                    <ul class="other">
+                        <li><a href="#" title="สมัครใช้งาน Facebook">สมัคร</a></li>
+                        <li><a href="#" title="เข้าสู่ระบบ Facebook">เข้าสู่ระบบ</a></li>
+                        <li><a href="#" title="เข้าไปดู Messenger">Messenger</a></li>
+                        <li><a href="#" title="Facebook Lite สำหรับ Android">Facebook Lite</a></li>
+                        <li><a href="#" title="เลือกดูวิดิโอ Watch ของเรา">Watch</a></li>
+                        <li><a href="#" title="เลือกดูไดเรกทอรีคนของเรา">ผู้คน</a></li>
+                        <li><a href="#" title="เรียกดูไดเรกทอรีเพจของเรา">เพจ</a></li>
+                        <li><a href="#" title="">หมวดหมู่เพจ</a></li>
+                        <li><a href="#" title="ดูสถานที่ที่กำลังเป็นที่นิยมบนเฟซบุ๊ค">สถานที่</a></li>
+                        <li><a href="#" title="ลองเล่นเกมบน Facebook">เกม</a></li>
+                        <li><a href="#" title="เรียกดูไดเรกทอรีสถานที่">ตำแหน่งที่ตั้ง</a></li>
+                        <li><a href="#" title="ซื้อและขายสินค้าบน Facebook Marketplace">Marketplace</a></li>
+                        <li><a href="#" title="เรียนรู้เพิ่มเติมเกี่ยวกับ Facebook Pay">Facebook Pay</a></li>
+                        <li><a href="#" title="เรียกดูไดเรกทอรีกลุ่มของเรา">กลุ่ม</a></li>
+                        <li><a href="#" title="สมัครและรับสมัครงานบน Facebook">งาน</a></li>
+                        <li><a href="#" title="เรียนรู้เพิ่มเติมเกี่ยวกับ Oculus">Oculus</a></li>
+                        <li><a href="#" title="เรียนรู้เพิ่มเติมเกี่ยวกับ Portal from Facebook">Portal</a></li>
+                        <li><a href="#" title="ลองดู Instagram">Instagram</a></li>
+                        <li><a href="#" title="ดูไดเรกทอรีรายการ Local ของเรา">ในพื้นที่</a></li>
+                        <li><a href="#" title="บริจาคให้กับการกุศลที่น่ายกย่อง">โครงการระดมทุน</a></li>
+                        <li><a href="#" title="ดูไดเรกทอรีบริการ Facebook ของเรา">บริการ</a></li>
+                        <li><a href="#" title="ดูศูนย์ข้อมูลการลงคะแนนเสียง">ศูนย์ข้อมูลการลงคะแนนเสียง</a></li>
+                        <li><a href="#" title="อ่านเว็บบล็อกของเรา สำรวจศูนย์รวมแหล่งข้อมูล และค้นหาโอกาสในการจ้างงาน">เกี่ยวกับ</a></li>
+                        <li><a href="#" title="ลงโฆษณาบน Facebook">สร้างโฆษณา</a></li>
+                        <li><a href="#" title="สร้างเพจ">สร้างเพจ</a></li>
+                        <li><a href="#" title="พัฒนาบนแพลตฟอร์มของเรา">ผู้พัฒนา</a></li>
+                        <li><a href="#" title="ก้าวหน้าไปอีกขั้นในหน้าที่การงานของคุณด้วยการมาร่วมงานกับบริษัทที่ยอดเยี่ยมของเรา">ร่วมงานกับ Facebook</a></li>
+                        <li><a href="#" title="เรียนรู้เกี่ยวกับความเป็นส่วนตัวของคุณและ Facebook">ความเป็นส่วนตัว</a></li>
+                        <li><a href="#" title="เรียนรู้เกี่ยวกับคุกกี้และ Facebook">คุกกี้</a></li>
+                        <li><a href="#" title="เรียนรู้เกี่ยวกับตัวเลือกโฆษณา">ตัวเลือกโฆษณา</a></li>
+                        <li><a href="#" title="อ่านข้อกำหนดและนโยบายของเรา">เงื่อนไข</a></li>
+                        <li><a href="#" title="ไปที่ศูนย์ช่วยเหลือของเรา">ความช่วยเหลือ</a></li>
+                        <li><a href="#" title="ดูและแก้ไขการตั้งค่า Facebook ของคุณ">การตั้งค่า</a></li>
+                        <li><a href="#" title="ดูบันทึกกิจกรรมของคุณ">บันทึกกิจกรรม</a></li>
+                    </ul>
+                </div>
+                <div class="copyright">
+                    <span>Meta © 2022</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
